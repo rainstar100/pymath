@@ -4,20 +4,18 @@ import matplotlib.pyplot as plt
 
 
 theta=np.arange(-np.pi,np.pi,0.01)
-r=1-np.sin(theta)
+#theta=np.linspace(-1000,1000,2000) NO consider the function's propterty
+r=1+np.cos(theta)
+r_x=r*np.sin(theta)
+r_y=r*np.cos(theta)
 
-#create 2 subplot 
-fig=plt.figure()
-polor_ax=plt.subplot(121)
-cart_ax=plt.subplot(122,projection='polar')
-#cart_ax.axhline(y=0,color="green",_LineStyle="--")
+ax1=plt.subplot(221)
+ax1.plot(r_x,r_y,'ro')
 
+ax2=plt.subplot(222,projection="polar")
+ax2.plot(theta,r,'ro')
 
-#plot on cartersin 
-cart_ax.plot(theta,r,'ro')
-
-#plot on polar
-polor_ax.plot(theta,r,'ro')
-
+ax3=plt.subplot(223)
+ax3=plt.plot(theta,r)
 
 plt.show()
