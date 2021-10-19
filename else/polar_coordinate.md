@@ -3,7 +3,7 @@
 ## compare with cartersin coordinate
 
 name | divide | area | accumulate
-:-:|:-:|:-:
+:-:|:-:|:-:|:-:
 cartersin | rectangle | $  f(x)dx $ | $  \int f(x)dx $
 polar | ? | ? |
 
